@@ -1,0 +1,18 @@
+// $txtcolor: aqua;
+// $txtcolor2: red;
+// $fz16: 70px;
+@import "var";//引進其他scss用底線不會被寫進css
+$box3:"box3";
+$txtcolor3: salmon;
+.box{
+    color: $txtcolor;
+}
+.box2{
+    font-size: $fz16;
+    span {
+        color:$txtcolor2;
+      }
+}
+.#{$box3}{
+    color:$txtcolor3;
+}
