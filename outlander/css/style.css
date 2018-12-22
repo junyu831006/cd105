@@ -1,10 +1,17 @@
 .box {
   color: aqua; }
 
-.box2 {
-  font-size: 70px; }
-  .box2 span {
-    color: blue; }
+.box2 span {
+  color: #72d3fa; }
+
+a {
+  color: blue; }
+  a:hover {
+    color: white;
+    background-color: turquoise; }
 
 .box3 {
-  color: salmon; }
+  width: 100vh;
+  height: 300px;
+  background-color: pink;
+  font-size: 60px; }
