@@ -44,3 +44,29 @@ a{
 .nulltest{
     @include nulltest(200px,200px,turquoise);
 }
+
+@mixin fontsize($fontSize) {
+    body{
+        font-size: $fontSize;
+        h1{
+            font-size: ($fontSize*4);
+        }
+        h2{
+            font-size: ($fontSize*3);
+        }
+        h3{
+            font-size: ($fontSize*2.5);
+        }
+        h4{
+            font-size: ($fontSize*2);
+        }
+    }
+}
+
+@for $i from 1 through 10{
+    .sm_#{$i}{
+        margin: ($i*10%) ;
+    }
+}
+
+@include fontsize(10px);
