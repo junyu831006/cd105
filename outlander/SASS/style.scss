@@ -4,6 +4,7 @@
 @import "var";//引進其他scss用底線不會被寫進css
 $box3:"box3";
 $txtcolor3: rgb(114, 211, 250);
+
 @mixin item( $box3, $bgc,$fz){
     .#{$box3}{
         width: 100vh;
@@ -34,3 +35,12 @@ a{
 }
 
 @include item($box3,pink,60px);
+
+@mixin nulltest($width ,$height,$bgc:null){
+    width: $width;
+    height: $height;
+    background-color: $bgc;
+}
+.nulltest{
+    @include nulltest(200px,200px,turquoise);
+}
