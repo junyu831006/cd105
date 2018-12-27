@@ -44,9 +44,12 @@ a{
 .nulltest{
     @include nulltest(200px,200px,turquoise);
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 100px;
 }
 =======
+=======
+>>>>>>> 1ef11ed378efcec4ca164d131d60de2b1abfa078
 }
 
 @mixin fontsize($fontSize) {
@@ -73,5 +76,9 @@ a{
     }
 }
 
+<<<<<<< HEAD
+@include fontsize(10px);
+>>>>>>> 1ef11ed378efcec4ca164d131d60de2b1abfa078
+=======
 @include fontsize(10px);
 >>>>>>> 1ef11ed378efcec4ca164d131d60de2b1abfa078
