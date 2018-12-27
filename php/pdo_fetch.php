@@ -9,15 +9,17 @@
 <body>
     <?php
     try{
-       	$dsn = "mysql:host=localhost;port=3306;dbname=test1;charset=utf8";
+       	$dsn = "mysql:host=localhost;port=3306;dbname=books;charset=utf8";
         $user="root";
         $password="abc1006";
         $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION );
         $pdo = new PDO($dsn, $user, $password, $options); 
-        //先決定誰要變更資訊
-        $sql= "update emp set sal=sal +100";
-        //再叫pdo執行
-        $pdo->exec($sql);
+        $sql = "select * from products";
+        //用變數$pdoStatement取資料(變數名可改)
+        $pdoStatement = $pdo->query($sql);
+        //用fetch顯示資料
+        $row=$pdoStatement->fetch();
+        echo $row[0],"...",$row[1];
         echo "異動成功"; 	
     }catch (PDOException $e) {
         echo "錯誤 : ", $e -> getMessage(), "<br>";
