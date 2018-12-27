@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			bottom: 0;
+		}
+
+		table,td{
+			border: 1px solid #aaa;
+			background: #fff;
+		}
+
+		table{
+			border: 1px solid #aaa;
+		}
+
+		table tr:first-child{
+			background: rgba(255, 182, 102, .8);
+		}
+
+		.table2 tr{
+			background: rgba(255, 153, 180, 1);
+		}
+
+		.table2 tr th:first-child{
+			background: rgba(255, 153, 180, 1);
+		}
+
+		.table2 tr th:nth-child(2){
+			background: rgba(255, 255, 255, 1);
+		}
+
+		.table2 td:first-child{
+			background: rgba(255, 153, 180, 1);
+		}
+
+		h2{
+
+		}
+
+		form{
+			border: 1px solid #aaa;
+		}
+
+		input{
+			border:1px solid #aaa;
+		}
+		.button{
+			width:500px;
+			margin: auto;
+		}
+
+		.button input{
+			margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+	 <h1>h4 homework</h1>
+	  <h2>申請會員</h2>
+	
+	 <form method="get" action="phpHW02-back-end.php">
+		<table border="8">
+		  <tr><td width="100px">姓名:</td><td  width="300px"><input type="text" name="memName" size="8" maxlength="6"></td></tr>
+		  <tr><td width="100px">帳號:</td><td  width="300px"><input type="text" name="memId" size="8" maxlength="6">最多八個文字</td></tr>
+		  <tr><td width="100px">密碼:</td><td  width="300px"><input type="password" name="memPsw" size="8" maxlength="6">最多八個文字</td></tr>
+		  <tr><td width="100px">信箱:</td><td  width="300px"><input type="mail" name="email" size="8" maxlength="20"></td></tr>
+		  <tr><td width="100px">性別:</td><td  width="300px">
+		  	<label><input type="radio" name="gender" value="male" id="male"> 男</label>
+		    <label><input type="radio" name="gender" value="female" id="female">女</label><br>
+		  </td></tr>
+		  <tr><td width="100px">生日:</td><td  width="300px"><input type="text" name="birthday" size="8" maxlength="10"></td></tr>
+		  <tr><td width="100px">連絡電話:</td><td  width="300px"><input type="phone" name="phone" size="8" maxlength="10"></td></tr>
+		</table>
+		<br>
+		<div class="button">
+		<input type="submit" value="新增">
+		<input type="reset" value="重新設定">
+		</div>
+	</form>
+	
+</body>
+</html>

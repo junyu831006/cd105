@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      h2{
+        text-align: center;
+        color: rebeccapurple;
+      }
+      table{
+        margin: auto;
+        background: turquoise;
+      }
+      .button{
+        text-align: center;
+      }
+      .img{
+        text-align: center;
+      }
+      
+      
+      
+      </style>
+    </head>
+    <body>
+      <div class="img">
+        <img src="價位表.png" alt="">
+      </div>
+      <h2>計價</h2>
+      <form action="09orangeSwitch.php" method="GET">
+        <table border="1">
+    
+          <tr>
+            <th>等級:</th>
+            <td><input type="radio" name="orange" value="1">1
+              <input type="radio" name="orange" value="2">2
+              <input type="radio" name="orange" value="3">3</td>
+          </tr>
+          <tr>
+            <th>公斤數:</th>
+            <td><input type="text" name="kg" ></td>
+          </tr>
+        </table>
+        <div class="button">  
+          <input type="submit"> <input type="reset">
+        </div>
+      </form>
+    </body>
+    </html>

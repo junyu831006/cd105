@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 960px; 
+            margin: auto;
+        }
+        .wrap h3{
+            text-align: center;
+        }
+        .wrap form{
+            width: 350px;
+            margin: auto;
+        }
+        .forbutton{
+            text-align: center;
+        }
+
+        table, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <h3>申請會員</h3>
+
+        <form action="04memberShow.php" method="post">
+            <table>
+                <tr>
+                    <td>姓名</td>
+                    <td>
+                        <input type="text" name="memName">
+                    </td>
+                <tr>
+                    <td>帳號</td>
+                    <td>
+                        <input type="text" name="memId">
+                        最多8個文數字
+                    </td>            
+                </tr>
+                <tr>
+                    <td>密碼</td>
+                    <td>
+                        <input type="password" name="memPsw">
+                        最多8個文數字
+                    </td>                
+                </tr>
+                <tr>
+                    <td>e-mail</td>
+                    <td>
+                        <input type="email" name="email">
+                    </td>                
+                </tr>
+                <tr>
+                    <td>性別</td>
+                    <td>
+                        <label for="male">
+                            <input type="radio" name="sex" id="male" value="男">
+                                男
+                        </label>
+                        <label for="female">
+                            <input type="radio" name="sex" id="female" value="女">
+                            女
+                        </label>
+                    </td>                
+                </tr>
+                <tr>
+                    <td>生日</td>
+                    <td>
+                        <input type="date" name="birthday">
+                    </td>
+                </tr>
+                <tr>
+                    <td>聯絡電話</td>
+                    <td>
+                        <input type="tel" name="tel">
+                    </td>
+                </tr>
+                <br>
+            </table>
+            <br>
+            <div class="forbutton">
+                <input type="submit" value="新增">
+                <input type="reset" value="重新設定">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

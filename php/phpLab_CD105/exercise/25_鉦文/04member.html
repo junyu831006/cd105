@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>表單欄位變數練習</title>
+	<style type="text/css">
+	h3{
+		text-align: center;
+	}
+	table,div{
+		 width:400px;
+	}
+	td{
+		padding: 3px;
+	}
+
+		
+	</style>
+</head>
+<body>
+	<form method="get" action="04memberShow.php">
+	<div>
+	<h3>申請會員</h3>
+	<table border="1">
+		<tr>
+			<tr><td>姓名：</td><td><input type="text" name="memName"></td></tr>
+			<tr><td>帳號：</td><td><input type="text" name="memId"> 最多8個文數字</td></tr>
+			<tr><td>密碼：</td><td><input type="text" name="memPsw"> 最多8個文數字</td></tr>
+			<tr><td>e-mail：</td><td><input type="text" name="email"></td></tr>
+			<tr><td>性別：</td><td>
+				<input type="radio" name="sex" value="男">男
+				<input type="radio" name="sex" value="女">女
+			</td></tr>		
+			<tr><td>生日：</td><td><input type="text" name="birthday"></td></tr>	
+			<tr><td>聯絡電話：</td><td><input type="text" name="tel"></td></tr>	
+		</tr>
+	</table>	
+	<div style="width: 200px;margin: 10px auto;">
+	<input type="submit" value="確定">
+	<input type="reset" value="重新設定"> 
+	</div>
+	</div> 
+	</form>
+
+
+
+
+<!-- 姓名：memName 
+帳號：memId
+密碼：memPsw
+e-mail：email
+性別：sex
+生日：birthday
+聯絡電話：tel -->
+
+</body>
+</html>

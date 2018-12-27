@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>input標籤</title>
+</head>
+<body>
+<form action="http://www.kimo.com.tw">
+Select your favorite color: <input type="color" name="favcolor"><br />
+
+Birthday (date): <input type="date" name="bday"><br />
+
+Birthday (date and time): <input type="datetime" name="bdaytime"><br />
+
+Birthday (date and time-local): <input type="datetime-local" name="bdaytime"><br />
+
+Birthday (month and year): <input type="month" name="bdaymonth"><br />
+
+E-mail: <input type="email" name="email"><br />
+
+Quantity (between 1 and 15): <input type="number" name="quantity" min="1" max="15" step="2" value="3"><br />
+
+1<input type="range" name="points" min="1" max="15" value="3">15<br />
+
+Search Google: <input type="search" name="googlesearch"><br />
+
+Telephone: <input type="tel" name="usrtel"><br />
+
+Select a time: <input type="time" name="usr_time"><br />
+
+Add your homepage: <input type="url" name="homepage"><br />
+
+Select a week: <input type="week" name="week_year"><br />
+
+課程名稱<input list="course" name="courseName">
+<datalist id="course">
+  <option value="HTML">
+  <option value="JavaScript">
+  <option value="php">
+</datalist>
+
+<input type="submit" value="送出" />
+
+</form>    
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04member.html</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            /* outline: 1px solid hsl(0deg, 100%, 50%); */
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        .banner{
+            width: 960px;
+            margin: 0 auto;
+            text-align: center;   
+            font-size: 60px;
+            margin-top: 40px;
+        }
+
+        .box{
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .box::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .title, .detail{
+            width: 460px;
+            float: left;
+            font-size: 30px;
+            vertical-align: middle;
+            padding-top: 40px;
+        }
+
+        .title{
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        input{
+            /* padding-top: 9px; */
+            font-size: 20px;
+            /* line-height: 14px; */
+            border: none;
+            /* border-bottom: #333 1px solid; */
+            outline: none;
+            
+        }
+
+
+
+        .sex{
+            opacity: 0;
+        } 
+
+        .sex:checked+.color {
+            /* padding: 5px; */
+            /* font-size: 30px; */
+            color: #fff;
+            background: #333;
+            border: #333 1px solid;
+            border-radius: 5px;
+            /* border-color: #e3393c; */
+            /* 當選項被點選時 checked 就改變 */
+            transition-duration:0.1s;
+            transition: 0.5s;
+        }
+
+        .sex:disabled+.color {
+            /* padding: 0px; */
+            /* font-size: 30px; */
+            /* color: #666; */
+            /* background: #f00; */
+            /* border: #333 1px solid; */
+            /* border-radius: 5px; */
+            /* border-color: #e3393c; */
+            /* 當選項被點選時 checked 就改變 */
+        }
+
+        .color{
+        
+        }
+
+        /* li{
+            border-bottom: 2px #00baff solid;
+        } */
+
+        .btn{
+            margin-top: 40px;
+        }
+        .btn > input{
+            /* padding-right:  10px; */
+            width: 80px;
+            font-size: 20px;
+            vertical-align: middle;
+            padding: 5px 5px 5px 5px;
+            border-radius:5px;
+            border: 1px solid #666;
+            background-color:transparent;
+
+        }
+
+        li{
+            padding-top: 20px;
+        }
+    
+    .btn>input:hover{
+        color: #fff;
+        background-color: #333;
+        transition-duration:0.3s;
+        transition: 0.5s;
+    }
+        
+        .banner span+span{
+            border:#333 solid 1px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 30px;
+        }
+
+
+        .detail li::after{
+               content:"";
+               display:block;
+               border-bottom: 1px solid #ccc;
+               width:60%;
+        }
+
+        .detail li:hover::after{
+            border-color:#999;
+            border-bottom: 2px solid #999;
+            transition-duration:0.1s;
+            transition: 0.25s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1><span>You</span><span>Tutu</span></h1>
+    </div>
+
+    <div class="box">
+            <div class="title">
+                    <ul class="list">
+                        <label for="memName"><li class="item">Name</li></label>
+                        <label for="memId"><li class="item">UID</li></label>
+                        <label for="memPsw"><li class="item">Password</li></label>
+                        <label for="email"><li class="item">Email</li></label>
+                        <label for="sex"><li class="item">Gender</li></label>
+                        <label for="birthday"><li class="item">Birthday</li></label>
+                        <label for="tel"><li class="item">Tel</li></label>
+                    </ul>
+                </div>
+            
+            
+                <div class="detail">
+                    <form method="get" action="04memberShow.php">
+                            <ul class="list">
+                                    <li class="item"><input id="memName" type="text" name="memName"></li>
+                                    <li class="item"><input id="memId" type="text" name="memId" maxlength="8"></li>
+                                    <li class="item"><input id="memPsw" type="password" name="memPsw" maxlength="8"></li>
+                                    <li class="item"><input id="email" type="text" name="email"></li>
+                                    <li class="item" >
+                                        <label><input class="sex" id="sex" type="radio" name="sex" value="female"><span class="color">Girl</span></label>
+                                        <label><input class="sex" type="radio" name="sex" value="male"><span class="color">Boy</span></label>
+                                    </li>
+                                    <li class="item"><input id="birthday" type="date" name="birthday"></li>
+                                    <li class="item"><input id="tel" type="text" name="tel"></li>
+                            </ul>
+                            <div class="btn">
+                                <input id="submit" type="submit" name="submit">
+                                <input id="reset" type="reset" name="reset">
+                            </div>
+                    </form>
+                </div>            
+    </div>
+</body>
+</html>

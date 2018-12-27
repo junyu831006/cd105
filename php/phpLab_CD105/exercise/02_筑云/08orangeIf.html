@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08orangeIf</title>
+    <style>
+        h2{
+                text-align:center;
+        }
+            table{
+                margin: auto;
+        }
+            th{
+                width: 100px;
+                text-align: left;
+        }
+            td{
+                width: 300px;
+        }
+            table input{
+                width: 50px;
+
+        }
+            .button{
+                text-align:center;
+                margin: 20px;
+        }
+    </style>
+</head>
+<body>
+  
+        <h2>計價</h2>
+        <form action="08orangeIf.php" method="post">
+            <table border='1'>
+                <tr>
+                    <th>等級：</th>
+                    <td><input type="text" name="level" maxlength="3">請輸入等級1,2,3</td>
+                </tr>
+                <tr>
+                    <th>公斤數：</th>
+                    <td><input type="text" name="weight" maxlength="3">最多3個文字</td>
+                </tr>
+            </table>
+            <div class="button">
+                <input type='submit' value="計算">
+                <input type="reset" value="重新設定">
+            </div>
+        </form>
+        
+   
+    
+    
+</body>
+</html>

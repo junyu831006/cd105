@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            text-align: center;
+            width: 500px;
+            margin:auto;
+        }
+        h2{
+            text-align: center;
+        }
+        form{
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+        <h2>計價</h2>
+    <form action="05orange.php"method="get">
+        <table>
+            <tr>
+                <td>單價:</td>
+                <td><input type="text"name="price">最多3個文數字</td>
+            </tr>
+            <tr>
+                <td>數量:</td>
+                <td><input type="text"name="number">最多3個文數字</td>
+            </tr>
+        </table>
+        <input type="submit"value="計算">
+        <input type="reset" name="reset" value="重新設定">
+    </form>
+</body>
+
+</html>

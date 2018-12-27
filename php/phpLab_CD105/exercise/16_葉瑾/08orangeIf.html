@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08orangeIf</title>
+    <style>
+    h2{
+        text-align:center;
+    }
+    form{
+        margin: auto;
+        width: 400px;       
+    }
+    table{
+        width: 400px;
+        }
+    
+    table, tr, td{
+        border: 1px solid black;
+    }
+    .button{
+        text-align:center;
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+        <!-- 輸入所購買的等級及公斤數,並算出小計 -->
+        <h2>計價</h2>
+        <form action="08orangeIf.php" method="post">
+            <table>
+                <tr>
+                    <td>等級</td>
+                    <td><input type="text" name="level" maxlength="3">請輸入等級1,2,3</td>
+                </tr>
+                <tr>
+                    <td>公斤數</td>
+                    <td><input type="text" name="weight" maxlength="3">最多3個文字</td>
+                </tr>
+            </table>
+            <div class="button">
+            <button type="submit">計算</button>
+        <button type="reset">重新設定</button>
+        </div>
+        </form>
+        
+   
+    
+    
+</body>
+</html>

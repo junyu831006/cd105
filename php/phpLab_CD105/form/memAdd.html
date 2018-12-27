@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style type="text/css">
+/*	#male,#female {
+		display:none;
+	}
+
+	.gender {
+		display:none;
+	}
+*/
+/*input[type=text] {
+	display:none;
+}*/
+</style>
+</head>
+<body>
+
+<h2>註冊為會員</h2>
+
+<form action="memAdd_2.html" method="get">
+
+	<label>帳號<input type="text" name="memId" maxlength="10" size="12"></label><br>
+	密碼<input type="password" name="memPsw" maxlength="10" size="12"><br>
+
+	性別<label><input type="radio" name="gender" value="male" id="male"> 男</label>
+	    <label><input type="radio" name="gender" value="female" id="female">女</label><br>
+
+	<label for="male"><img src="male.png" alt="男"></label>
+
+	<label for="female"><img src="female.png" alt="女"></label><br> 
+
+	生日<input type="text" name="birthday"><br>    
+
+
+
+	語言 
+	<input type="checkbox" name="lang" value="1">C
+	<input type="checkbox" name="lang" value="2">PHP
+	<input type="checkbox" name="lang" value="3">Java  <br>
+	有話要說<br>
+	<textarea name="note" rows="5" cols="30">要不要下課??</textarea><br>
+
+	消息來源
+	<select name="info">
+		<option value="1">EDM</option>
+		<option value="2">報紙</option>
+		<option value="3" selected>親友介紹</option>
+	</select><br>
+	<input type="submit" value="確定加入"> 
+	<input type="reset" value="復原">
+	<input type="button" value="play">
+	<hr>
+	<button type="submit"><img src="小玉.gif" width="36">確定加入</button>	
+</form>    
+</body>
+</html>

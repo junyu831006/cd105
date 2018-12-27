@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>14tax</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+
+		table,td{
+			border-collapse: collapse;
+			border: 1px solid black;
+			margin: auto;
+			padding: 10px;
+		}
+
+		form{
+			padding: 30px;
+		}
+	</style>
+</head>
+<body>
+
+
+	<table>
+			<tr>
+				<td colspan="4">100年度綜合所得稅速算公式</td>
+			</tr>
+			<tr>
+				<td>級別</td>
+				<td>級距</td>
+				<td>稅率</td>
+				<td>累進稅差</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>0~500,000元</td>
+				<td>5%</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>500,001~1,130,000元</td>
+				<td>12%</td>
+				<td>35,000元</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>1,130,001~2,260,000元</td>
+				<td>20%</td>
+				<td>125,400元</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>2,260,001~4,230,000元</td>
+				<td>30%</td>
+				<td>351,400元</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>4,230,001元以上</td>
+				<td>40%</td>
+				<td>774,400元</td>
+			</tr>
+
+	</table>
+
+	<form action="14tax.php" method="get" accept-charset="utf-8">
+		
+
+		<input type="text" name="number" value="" placeholder="綜合所得淨額">
+		<input type="submit" name="" value="送出">
+		<input type="reset" name="" value="重新填寫">
+	</form>
+</body>
+</html>

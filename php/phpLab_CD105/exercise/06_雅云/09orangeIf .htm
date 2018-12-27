@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>08</title>
+	<style type="text/css">
+		
+		table,td{
+			border: 1px solid black;
+			border-collapse: collapse;
+			margin: auto;
+		}
+
+		form table{
+			margin-top: 50px;
+		}
+
+		div{
+			text-align: center;
+		}
+
+		input,select{
+			margin: 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>等級</td>
+			<td>40公斤以內</td>
+			<td>超出40公斤</td>
+			<td>超出100公斤</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>30元/公斤</td>
+			<td>25元/公斤</td>
+			<td>20元/公斤</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>25元/公斤</td>
+			<td>20元/公斤</td>
+			<td>15元/公斤</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>20元/公斤</td>
+			<td>15元/公斤</td>
+			<td>10元/公斤</td>
+		</tr>
+	</table>
+
+	<div>
+		<form action="08orangeIf.php">
+			
+			<table>
+				<tr>
+					<td>選擇購買等級</td>
+					<td>
+						<select name="level">
+							<option value="1">1</option>
+							<option  value="2">2</option>
+							<option  value="3">3</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>輸入購買公斤數</td>
+					<td>
+						<input type="text" name="number" >
+					</td>
+				</tr>
+			</table>
+			<input type="submit" name="">
+			<input type="reset" name="">
+		</form>
+	</div>
+</body>
+</html>

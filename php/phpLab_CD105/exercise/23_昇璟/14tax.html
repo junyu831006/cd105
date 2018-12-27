@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table{
+        margin: auto;
+        width: 960px;
+        text-align: center;
+    }
+    input{
+        display: block;
+        margin: auto;
+    }
+    input:hover{
+        transition: all 2s ease-in-out;
+        background: red;
+        color: #000;
+    }
+    
+    
+    </style>
+</head>
+<body>
+
+
+    <form action="14tax.php">
+        <table border="1">
+            <tr>
+                <td colspan="4">100年度綜合所得稅速算公式</td>
+            </tr>
+            <tr>
+                <td>級別</td>
+                <td>級距</td>
+                <td>稅率</td>
+                <td>累進稅差</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0~500,000元</td>
+                <td>5%</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>500,001~1,130,000元</td>
+                <td>12%</td>
+                <td>35,000元</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1,130,001~2,260,000元</td>
+                <td>20%</td>
+                <td>125,400元</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2,260,001~4,230,000元</td>
+                <td>30%</td>
+                <td>351,400元</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4,230,001元以上</td>
+                <td>40%</td>
+                <td>774,400元</td>
+            </tr>
+        </table>
+            <input type="number" name="number" placeholder="金額">
+            <input type="submit">
+
+
+
+
+
+
+
+
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		h1, div{
+			color: lightgreen;
+			text-align: center;
+
+		}
+		table{
+			margin: auto;
+			color: lightsalmon;
+			border-collapse: collapse;
+		}
+		
+	</style>
+</head>
+<body>
+	<form action="09orangeSwitch.php" method="GET">
+		<h1>橘子幾多錢</h1>
+		<table border ='1'>
+			<tr>
+				<td>等級</td>
+				<td>
+					<select name="rank" >
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>公斤數</td>
+				<td>
+					<input type="number" name="qty" required>
+				</td>
+			</tr>
+		</table>
+		<div>
+			<input type="submit" name="submit" value="算算看">
+			<input type="reset" name="reset" value="再算一次">
+		</div>	
+</body>
+</html>

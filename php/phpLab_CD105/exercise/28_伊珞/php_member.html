@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>php_member</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+		.form{
+			width: 800px;
+			margin: auto;
+			background-color: #F7F7F7;
+			margin-top: 20px;
+		}
+		p{
+			text-align: center;
+			font-size: 20px;
+			padding:20px;
+			letter-spacing: 5px;
+		}
+		.table{
+			margin: auto;
+		}
+		table{
+			margin: auto;
+		}
+		.input{
+			text-align: center;
+			width: 500px;
+			/*outline: solid #f00 1px;*/
+		}
+		td{
+			width: 300px;
+			border: 1px solid #ccc;
+			padding: 5px;
+		}
+		.input{
+			text-align: center;
+			
+		}
+		.input td{
+			border: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<p>申請會員</p>
+
+		<form action="php_member_sucess.php" method="get">
+		<table class="table">
+			<tr>
+				<td>姓名：</td>
+				<td><input type="text" name="name" maxlength="5" size="12" placeholder="張三" size="50"></td>
+			</tr>
+			<tr>
+				<td>帳號：</td>
+				<td><input type="text" name="id" maxlength="12" size="12" placeholder="iPod">最多8個文數字</td>
+			</tr>
+				<td>密碼：</td>
+				<td><input type="password" name="pass_word" maxlength="12" size="12" placeholder="1234">最多8個文數字</td>
+			<tr>
+				<td>email：</td>
+				<td><input type="email" name="email" maxlength="12" size="12" placeholder="iPod@iPod"></td>
+			</tr>
+			<tr>
+				<td>性別：</td>
+				<td><input type="radio" name="gender" value="male">男<input type="radio" name="gender" value="female">女</td>
+			</tr>
+			<tr>
+				<td>生日：</td>
+				<td><input type="date" name="birthday"></td>
+			</tr>
+			<tr>
+				<td>聯絡電話：</td>
+				<td><input type="text" name="phone_number" placeholder="4257383#224"></td>
+			</tr>
+		</table>
+		<table class="input">
+			<tr>
+				<td><input type="submit" value="新增"><input type="reset" value="重新設定"></td>
+			</tr>
+		</table>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07orange.html</title>
+	.<style type="text/css">
+		body{
+			font-size: 32px;
+			text-align: center;
+		} 
+		tr,td{
+			border:2px solid #ccc;
+		}
+		.txt-input,input{
+			display: inline-block;
+			padding: 5px 20px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="txt-input">
+	<form method="get" action="07orangeIf.php">
+		<table>
+			<h2>若消費金額超過500元, 則打九折</h2>
+			<h2>若消費金額超過1000元, 則打七折</h2>
+			<tr>
+				<td>單價：</td>
+				<td><input type="text" name="price" maxlength="3">最多3個文數字</td>
+			</tr>
+			<tr>
+				<td>數量：</td>
+				<td><input type="text" name="number" maxlength="3">最多3個文數字</td>
+			</tr>
+		</table>
+		<input type="submit" name="" value="計算">
+		<input type="reset" name="" value="重新設定">
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  h2{
+    text-align: center;
+    color: rebeccapurple;
+  }
+  table{
+    margin: auto;
+    background: turquoise;
+  }
+  .button{
+    text-align: center;
+  }
+  
+  
+  
+  </style>
+</head>
+<body>
+  
+  <h2>計價</h2>
+  <form action="05orange.php" method="GET">
+    <table border="1">
+
+      <tr>
+        <th>單價:</th>
+        <td><input type="text" name="orange" maxlength="3">最多3個文字</td>
+      </tr>
+      <tr>
+        <th>數量:</th>
+        <td><input type="text" name="kg" maxlength="3">最多3個文字</td>
+      </tr>
+    </table>
+    <div class="button">
+      <input type="submit"> <input type="reset">
+    </div>
+  </form>
+</body>
+</html>

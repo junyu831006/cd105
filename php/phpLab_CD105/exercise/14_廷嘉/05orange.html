@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PHP作業四-填寫頁</title>
+	<style type="text/css">
+		.button{
+			width: 500px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="05orange.php" method="post">
+		<div style="text-align : center ; width : 500px ;">計價</div>
+		<table border="1" width="500px">
+			<tr>
+				<td>單價</td>
+				<td><input type="text" name="price">最多3個文數字</td>
+			</tr>
+			<tr>
+				<td>數量</td>
+				<td><input type="text" name="num">最多3個文數字</td>
+			</tr>
+			
+		</table>
+		<div class="button">
+			<label>
+				<button type="submit" name="submit">新增</button>
+				<button type="reset" name="reset">重新設定</button>
+			</label>
+		</div>
+	</form>
+</body>
+</html>
