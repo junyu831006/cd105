@@ -20,3 +20,44 @@ a {
   width: 200px;
   height: 200px;
   background-color: turquoise; }
+
+.sm_1 {
+  margin: 10%; }
+
+.sm_2 {
+  margin: 20%; }
+
+.sm_3 {
+  margin: 30%; }
+
+.sm_4 {
+  margin: 40%; }
+
+.sm_5 {
+  margin: 50%; }
+
+.sm_6 {
+  margin: 60%; }
+
+.sm_7 {
+  margin: 70%; }
+
+.sm_8 {
+  margin: 80%; }
+
+.sm_9 {
+  margin: 90%; }
+
+.sm_10 {
+  margin: 100%; }
+
+body {
+  font-size: 10px; }
+  body h1 {
+    font-size: 40px; }
+  body h2 {
+    font-size: 30px; }
+  body h3 {
+    font-size: 25px; }
+  body h4 {
+    font-size: 20px; }
