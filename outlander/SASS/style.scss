@@ -71,7 +71,7 @@ a{
 }
 
 @for $i from 1 through 10{
-    .sm_#{$i}{
+    .col-sm_#{$i}{
         margin: ($i*10%) ;
     }
 }
