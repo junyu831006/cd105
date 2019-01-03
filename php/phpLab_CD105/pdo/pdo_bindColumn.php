@@ -6,11 +6,18 @@
         $password="root";
         $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION );
         $pdo = new PDO($dsn, $user, $password, $options); 
-        $sql = "select * from products";
-        //用變數$products取資料(變數名可改)
-        $products = $pdo->query($sql);
-        //用fetch顯示資料(看不懂)
-        $prodRows=$products->fetchAll(PDO::FETCH_ASSOC);
+        $sql = "select * from products where psn = :psn,pname=:pname,price=:price,author=:author,pages=:pages,image=:image where psn=:psn";
+    $products = $pdo->prepare($sql);
+    $products->bindColumn("psn", $psn);
+    $products->bindColumn("psn", $psn);
+    $products->bindColumn("pname", $pname);
+    $products->bindColumn("price", $price);
+    $products->bindColumn("author", $author);
+    $products->bindColumn("pages", $pages);
+    $products->bindColumn("image", $image);
+    //用fetch顯示資料(看不懂)
+    $prodRows=$products->fetchAll(PDO::FETCH_ASSOC);
+    // $products->execute();
        
     }catch (PDOException $e) {
         // echo "錯誤 : ", $e -> getMessage(), "<br>";
@@ -37,13 +44,13 @@ if( $err != ""){ //有狀況
 <table align="center">
 	<tr><th>書號</th><th>書名</th><th>價格</th><th>作者</th></tr>
 <?php
-	foreach( $prodRows as $i => $prodRow ){
+	while($products->fetchAll(PDO::FETCH_ASSOC)){
 ?>
 	<tr>
-		<td><?php echo $prodRow["psn"];?></td>
-		<td><?php echo $prodRow["pname"];?></td>
-		<td><?php echo $prodRow["price"];?></td>
-		<td><?php echo $prodRow["author"];?></td>
+		<td><?php echo $psn;?></td>
+		<td><?php echo $pname;?></td>
+		<td><?php echo $price;?></td>
+		<td><?php echo $author;?></td>
 	</tr>
 <?php	
 	}
