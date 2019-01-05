@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 // var cssUrls = require('gulp-css-urls');
 var sass = require('gulp-sass');
+// var gsap = require('gsap');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
@@ -30,7 +31,7 @@ gulp.task('default', ['sass'], function () {
         server: {
             //根目錄
             baseDir: "./",
-            index: "index.html"
+            index: "tweenMax.html"
         }
     });
 
