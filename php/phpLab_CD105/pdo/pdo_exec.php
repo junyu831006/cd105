@@ -6,11 +6,16 @@
         $password="root";
         $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION );
         $pdo = new PDO($dsn, $user, $password, $options); 
-        $sql = "select * from products";
+        // $sql = "update products set price=price+20";
+        // $sql = "insert into products(psn,pname,price,author,pages,image)
+        //         VALUES('10','pis story','2000','Gina','100',null)";
         //用變數$products取資料(變數名可改)
-        $products = $pdo->exec($sql);
+        // $sql = "delete from products where psn=9";
+        $sql = "select * from products";
+        // $products = $pdo->exec($sql);
+        $products = $pdo->query($sql);
         //用fetch顯示資料(看不懂)
-        // $prodRows=$products->fetchAll(PDO::FETCH_ASSOC);
+        $prodRows=$products->fetchColumn(PDO::FETCH_BOTH);
        
     }catch (PDOException $e) {
         // echo "錯誤 : ", $e -> getMessage(), "<br>";
@@ -37,16 +42,16 @@ if( $err != ""){ //有狀況
 <table align="center">
 	<tr><th>書號</th><th>書名</th><th>價格</th><th>作者</th></tr>
 <?php
-	foreach( $prodRows as $i => $prodRow ){
+	// foreach( $prodRows as $i => $prodRow ){
 ?>
 	<tr>
-		<td><?php echo $prodRow["psn"];?></td>
+		<!-- <td><?php echo $prodRow["psn"];?></td>
 		<td><?php echo $prodRow["pname"];?></td>
 		<td><?php echo $prodRow["price"];?></td>
-		<td><?php echo $prodRow["author"];?></td>
+		<td><?php echo $prodRow["author"];?></td> -->
 	</tr>
 <?php	
-	}
+	// }
 }     
 ?> 
 </body>

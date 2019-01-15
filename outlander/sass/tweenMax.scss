@@ -7,3 +7,9 @@ body{
     height: 100px;
     background-color: salmon;
 }
+.mask{
+    width: 100px;
+    height: 50px;
+    border: 1px solid salmon;
+    overflow: hidden;
+}

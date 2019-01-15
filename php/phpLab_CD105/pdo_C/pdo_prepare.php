@@ -19,9 +19,10 @@ try {
 	// $products->execute();
 
 	//...................bindParam, 第二個參數只能是變數
-	$sql = "select * from products where price> :price ";
+	$sql = "select * from products where price= :price ";
+	// $sql = "update products set price=price+10 where price= :price ";
 	$products = $pdo->prepare($sql);
-	$price = 800;
+	$price = 850;
 	$products->bindParam(":price", $price);
 	$products->execute();	
 

@@ -3,14 +3,14 @@
     try{
        	$dsn = "mysql:host=localhost;port=3306;dbname=books;charset=utf8";
         $user="root";
-        $password="abc1006";
+        $password="root";
         $options = array(PDO::ATTR_CASE=>PDO::CASE_NATURAL, PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION );
         $pdo = new PDO($dsn, $user, $password, $options); 
         $sql = "select * from products";
         //用變數$products取資料(變數名可改)
         $products = $pdo->query($sql);
         //用fetch顯示資料(看不懂)
-        // $prodRows=$products->fetchObject();
+        $prodRows=$products->fetchObject();
        
     }catch (PDOException $e) {
         // echo "錯誤 : ", $e -> getMessage(), "<br>";

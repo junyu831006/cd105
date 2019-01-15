@@ -1,4 +1,5 @@
 <?php
+session_start();
 $memId = $_POST["memId"];
 $memPsw = $_POST["memPsw"];
 $errMsg = "";
@@ -15,6 +16,10 @@ try {
 		$errMsg .= "帳密錯誤, <a href='login.html'>重新登入</a><br>";
 	}else{
 		$memRow = $member->fetch(PDO::FETCH_ASSOC);
+		$_SESSION["memNo"] = $memRow["no"];
+        $_SESSION["memId"] = $memRow["memId"];
+        $_SESSION["memName"] = $memRow["memName"];
+        $_SESSION["email"] = $memRow["email"];
 	}
 } catch (PDOException $e) {
 	$errMsg .= "錯誤 : ".$e -> getMessage()."<br>";
