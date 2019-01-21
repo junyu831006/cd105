@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<style type="text/css">
+  .memTable th {
+    background:pink;
+  }
+  .memTable td {
+    border-bottom: 1px dotted deeppink;
+  }  
+</style>
+</head>
+
+<body>
+<div>首頁>>會員專區</div>
+<center>
+會員帳號<input type="text" name="memId" id="memId"/>
+<input type="button" value="取得會員資料" onclick="getMember()"/>
+<div id="showPanel"></div>
+</center>
+<script>
+function showMember( xmlDoc ){ 
+  var table,tr,td,i,j, text,textNode;
+  var rootElement = xmlDoc.documentElement;
+  var fields = rootElement.childNodes;
+
+  var len = fields.length;
+  table = document.createElement("table");//<table></table>
+  for( var i=0; i<len; i++){
+    //產生一列 <tr></tr>
+    tr = document.createElement("tr");
+    table.appendChild( tr ); //<table><tr></tr></table>  
+    
+    //產生左邊格
+    th = document.createElement("th");
+    tr.appendChild( th );    //<table><tr><th></th></tr></table>
+    textNode = document.createTextNode(fields[i].nodeName);
+    th.appendChild( textNode ); //<table><tr><th>memId</th></tr></table>
+
+    //產生右邊格
+    td = document.createElement("td");
+    tr.appendChild( td );    //<table><tr><th></th><td></td></tr></table>
+    textNode = document.createTextNode(fields[i].firstChild.nodeValue);
+    td.appendChild( textNode );     
+  }
+  document.getElementById("showPanel").appendChild( table );
+  table.setAttribute("class","memTable");
+}
+
+function getMember(){
+  var xhr = new XMLHttpRequest();
+  xhr.onload=function (){
+	  if( xhr.status == 200 ){
+  		//alert( xhr.responseText );	
+      showMember( xhr.responseXML ); //=============修改左側程式碼
+	  }else{
+	    alert( xhr.status );
+	  }
+  }
+  
+  var url = "getMore_XML.php?memId=" + document.getElementById("memId").value;
+  xhr.open("Get", url, true);
+  xhr.send( null );
+}
+</script>
+</body>
+</html>

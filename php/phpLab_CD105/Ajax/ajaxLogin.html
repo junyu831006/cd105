@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,17 +52,49 @@ function $id(id){
       //將頁面上的使用者資料清掉
       if($id('spanLogin').innerHTML == "登入"){
         $id('lightBox').style.display = 'block';
-      }else{
-        $id('memName').innerHTML = '&nbsp';
-        $id('spanLogin').innerHTML = '登入';
+      }else{//登出
+       
+        //清除登入者資訊
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+          if( xhr.status == 200){
+            $id('memName').innerHTML = '&nbsp';
+            $id('spanLogin').innerHTML = '登入';
+          }else{
+            alert( xhr.status );
+          }
+        }
+        xhr.open("get", "ajaxLogout.php",true);
+        xhr.send(null);
       }
 
     }//showLoginForm
-
+    
     function sendForm(){
       //=====使用Ajax 回server端,取回登入者姓名, 放到頁面上    
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange=function(){
+        // if(xhr.readyState == 4){
+        // }
+      if(xhr.responseText == "查無此人"){
+        alert("請重新登入");
+        }else{
+            document.getElementById("memName").innerHTML=xhr.responseText;
+            // console.log(xhr.responseText);
+            $id('lightBox').style.display = 'none';
+          $id('memId').value = '';
+          $id('memPsw').value = '';
+          $id('spanLogin').innerHTML = '登出';
+        }
+      }
+      var data_info = "memId=" + document.getElementById("memId").value;
+      var data_memPsw = "memPsw=" + document.getElementById("memPsw").value;
 
+      var url = "ajaxLogin.php?" + data_info +"&" +data_memPsw;
+          // console.log(url);
+      xhr.open("Get",url,true);
 
+      xhr.send(null);
       //將登入表單上的資料清空，並隱藏起來
       $id('lightBox').style.display = 'none';
       $id('memId').value = '';

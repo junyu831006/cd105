@@ -70,7 +70,10 @@
     //設定好所要連結的程式
         var data_info = "memId=" + document.getElementById("memId").value;
         // 連線到伺服器GetResponseText.php，為什麼要問號在後面
+        //在 PHP 中取得目前網址的方式:http://www.wibibi.com/info.php?tid=85
         var url = "GetResponseText.php?" + data_info;
+          console.log(url);
+
         xhr.open("Get",url,true);
 
     //送出資料(因為是用GET所以可以send null)
