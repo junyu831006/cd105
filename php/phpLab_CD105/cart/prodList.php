@@ -31,9 +31,14 @@ a {
 a:hover {
     text-decoration:underline;
 }
+.prodImg{
+	width:100px;
+}
 </style>
 </head>
 <body>
+<table align="center" width="600">
+	<tr bgcolor="#bfbfef"><th>書號</th><th>書名</th><th>價格</th><th>作者</th><th>購買</th></tr>
 <?php	
 	while($prodRow = $products->fetch(PDO::FETCH_ASSOC)){
 ?>		
@@ -49,6 +54,7 @@ a:hover {
 			</td>
 			<td><?php echo $prodRow["price"];?></td>
 			<td><?php echo $prodRow["author"];?></td>
+			<td><img src="images/<?php echo $prodRow["image"];?>"  class="prodImg">  </td>
 			<td><input type="submit" value="放入購物車"></td>
 		</tr>
 		</form>
