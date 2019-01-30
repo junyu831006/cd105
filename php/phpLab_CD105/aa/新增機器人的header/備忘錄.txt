@@ -1,0 +1,3 @@
+機器人的JS  我放在header.js 最下面
+機器人的scss 我放在_header.scss下面
+html 在nav下面 有註解的地方 

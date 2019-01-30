@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			button{
+				width: 120px;
+				height: 74px;
+			}
+		</style>
+        <script src="js/jquery-3.3.1.min.js"></script>	
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>					
+		
+
+		<title>csv to tabel</title>
+	</head>
+	<body>
+        <div>
+         
+            <button id="btn__ajax">ajax</button>
+		</div>
+        <div id="feedback"></div>
+        
+    <script>
+        
+	$(document).ready(function () {
+        $('#btn__ajax').click(function(){
+            $.ajax({
+                url:'JSON_XML_CSV/employee.csv',
+                dataType: 'text',
+                // type: 'POST',
+                success:function(data){               
+                            // alert(123);
+                    var employeeData =data.split(/\n|\r\n/);
+                    tabledata = '<table class="table table-bordered table-striped"; >';
+                        for(var i=0; i<employeeData.length ; i++){
+                            var cellData =employeeData[i].split(',');
+                            // var employeeData =employeeData[i];
+                            tabledata +='<tr>';
+                            for(var j=0; j<cellData.length ; j++){
+                                if(i == 0){
+                                    tabledata += '<th>'+cellData[i]+'</th>';
+                                }else{
+                                    tabledata += '<td>'+cellData[i]+'</td>';
+                                }
+                            };
+                            tabledata +='</tr>';
+                        };                       
+                    tabledata += "</table>";
+                    $('#feedback').append(tabledata);
+            
+
+            }})
+        });
+    });
+        
+    
+    </script>	
+		
+	</body>
+</html>

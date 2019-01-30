@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="js/jquery-3.3.1.min.js"></script>						
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>						
+		
+		<title>JSON to Unordered List using AJAX(jQuery)</title>
+	</head>
+	<body>
+		<h1 align="left">JSON to Unordered List using AJAX(jQuery)</h1>
+		<div align="left">
+			<button id="ajaxButton">AJAX</button>
+		</div>
+		<div id="feedback"></div>
+
+		<script>
+			$(document).ready(function(){				
+				$('#ajaxButton').click(function(){
+					$.ajax({
+						url: 'JSON_XML_CSV/music.txt',
+						type: 'GET',
+						dataType: 'json',
+						success: function(data){
+							var music = '<ul>';
+								// $.each(data,function(i,n){
+								// 	music += '<li>'+n['optionValue']+'</li>';
+								// });
+
+								// i:代表data內index的資料
+								// n:代表index的內容
+								for(var i=0; i<data.length; i++){
+									music += '<li>'+data[i]+'</li>';
+								}
+
+							 music += '</ul>';
+
+							$('#feedback').append(music);
+						}
+					});
+				});
+			});			
+		</script>
+	</body>
+</html>

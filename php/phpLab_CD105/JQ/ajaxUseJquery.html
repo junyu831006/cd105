@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			button{
+				width: 120px;
+				height: 74px;
+			}
+		</style>
+		<script src="js/jquery-3.3.1.min.js"></script>						
+		<script>
+			//法一
+			// alert(123);
+			$(document).ready(function () {
+				// $('#btn__load').click(function(){
+				// 	$('#feedback').load('UseParameter.php',{name:"pig",age:4});
+				// });
+				$('#btn__get').click(function(){
+					$.get('UseParameter.php',{name:"pig",age:4},function(data){
+						$('#feedback').html('<h2>'+data+'</h2>');
+
+					})
+				});
+				$('#btn__post').click(function(){
+					$.post('UseParameter.php',{name:"pig",age:4},function(data){
+						$('#feedback').html('<h2>'+data+'</h2>');
+
+					})
+				});
+				$('#btn__getJSON').click(function(){
+					$.getJSON('JSON_XML_CSV/animal.json',{},function(data){
+						$('#feedback').html('<h2>'+data[0].Note+'</h2>');
+
+					})
+				});
+
+
+				$('#btn__ajax').click(function(){
+					$.ajax({
+						url:'UseParameter.php',
+						data:{name:"pig",age:4},
+						type: 'POST',
+						sucess:function(data){
+						$('#feedback').html('<h2>'+data+'</h2>');
+
+					}})
+				});
+			});
+        </script>
+
+		<title>jQuery</title>
+	</head>
+	<body>
+        <dib>
+            <button id="btn__load">Load</button>
+            <button id="btn__get">get</button>
+            <button id="btn__post">post</button>
+            <button id="btn__getJSON">getJSON</button>
+            <button id="btn__ajax">ajax</button>
+		</dib>
+		<p id="feedback"></p>
+				
+		
+	</body>
+</html>

@@ -1,0 +1,52 @@
+@import "base/_reset.scss";
+@import "base/_var.scss";
+@import "mixin/_mixin.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+*{
+    font-family: "微軟正黑體";
+}
+a{
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+}
+//呼叫格線
+@include grid(12);
+
+//四個字的主按鈕
+.#{$btn-main-s}{
+    background-color:$color-btn-main;
+    @include btn();
+    @include btn-s();
+}
+//六個字的主按鈕
+.#{$btn-main-l}{
+    background-color:$color-btn-main;
+    @include btn();
+    @include btn-l();
+}
+//四個字次按鈕
+.#{$btn-sub-s}{
+    background-color:$color-btn-sub;
+    @include btn();
+    @include btn-s();
+}
+//六個字主按鈕
+.#{$btn-sub-l}{
+    background-color:$color-btn-sub;
+    @include btn();
+    @include btn-l();
+}
+
+//陰影
+.shadow-text{
+    text-shadow: $shadow;
+} 
+.shadow-box{
+    box-shadow: $shadow;
+}
+
